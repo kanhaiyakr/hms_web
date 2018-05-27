@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ /*
+ *= require jquery-ui
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html, body { height: 100%; padding: 0; margin: 0; }
+div { width: 50%; height: 50%; float: left; }
+#div1 { background: #eeeeee; text-align: center;}
+#div2 { background: white; text-align: center;}
+#div3 { background: white; text-align: center;}
+#div4 { background: #eeeeee; text-align: center;}
+th {
+  text-align: center;
+  background-color: #286090;
+  color: white;
+}
+h4{
+  color:#286090;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+td{
+  text-align: center;
+}
+.center{
+  margin-left: 25%;
+  margin-top: 12.5%;
+}
+#patient{
+  color: #078fbb;
+}
+#viewappointment {
+    width: 100%;
+    margin-top: 12.5%;
+}
+
+table {
+        width: 100%;
+    }
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 33.2%;
+    float: left;
+}

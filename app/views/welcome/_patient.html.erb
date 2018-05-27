@@ -1,0 +1,30 @@
+<div class="center">
+  <u><h4>PATIENT</h4></u>
+  <form>
+    <p><input type="text" class="form-control" id="patientname" placeholder="Name"></p>
+    <p><input type="text" class="form-control" id="patientphone" placeholder="Phone Number"></p>
+    <button type="button" class="btn btn-warning pull-right" onclick="savePatient();">Submit</button>
+  </form>
+</div>
+<script>
+function savePatient(){
+  var name = $('#patientname').val();
+  var phone = $('#patientphone').val();
+  var patientParameter = {
+                            "patient": {
+                              "name" : name,
+                              "phone" : phone
+                            }
+                          }
+
+  $.ajax({
+    url: "localhost:3400/patients",
+    type: "POST",
+    dataType: "json",
+    data: patientParameter,
+    success: function () {
+                console.log('patient data saved');
+            }
+  })
+}
+</script>
