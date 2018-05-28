@@ -20,11 +20,11 @@
 @import "bootstrap";
 
 html, body { height: 100%; padding: 0; margin: 0; }
-div { width: 50%; height: 50%; float: left; }
-#div1 { background: #eeeeee; text-align: center;}
-#div2 { background: white; text-align: center;}
-#div3 { background: white; text-align: center;}
-#div4 { background: #eeeeee; text-align: center;}
+#div1 { background: #eeeeee; text-align: center; width: 50%; height: 50%; float: left;}
+#div2 { background: white; text-align: center; width: 50%; height: 50%; float: left;}
+#div3 { background: white; text-align: center; width: 50%; height: 50%; float: left;}
+#div4 { background: #eeeeee; text-align: center; width: 50%; height: 50%; float: left;}
+
 th {
   text-align: center;
   background-color: #286090;
@@ -41,7 +41,27 @@ td{
 .center{
   margin-left: 25%;
   margin-top: 12.5%;
+  margin-right: 25%;
 }
+
+div.login,div.signup{
+  margin-left: 25%;
+}
+
+.login-header {
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 7.5%;
+    height: 80px;
+}
+
+.btn.btn-social{
+  width: 50%;
+    height: 50%;
+    border-radius: 6px;
+}
+
 #patient{
   color: #078fbb;
 }
@@ -49,6 +69,11 @@ td{
     width: 100%;
     margin-top: 12.5%;
 }
+
+.btn-facebook{background: #3B5998;color: white;}
+.btn-google{background: #DD4B39; color: white;}
+
+
 
 table {
         width: 100%;

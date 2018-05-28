@@ -24,6 +24,8 @@ gem 'uglifier', '>= 1.3.0'
 #Rack::Cors provides support for Cross-Origin Resource Sharing (CORS)
 gem 'rack-cors', :require => 'rack/cors'
 # Use CoffeeScript for .coffee assets and views
+#For User authentication
+gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'

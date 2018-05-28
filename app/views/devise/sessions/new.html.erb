@@ -1,0 +1,122 @@
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn-submit {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn-submit:hover {
+    opacity: 1;
+}
+div.login-header a {
+    font-size: 30px;
+}
+
+div.login-header span {
+    font-size: 25px;
+}
+.strike {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        color: dodgerblue;
+    }
+
+    .strike > span {
+        position: relative;
+        display: inline-block;
+    }
+
+    .strike > span:before,
+    .strike > span:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        height: 1px;
+        background: dodgerblue;
+    }
+
+    .strike > span:before {
+        right: 100%;
+        margin-right: 15px;
+    }
+
+    .strike > span:after {
+        left: 100%;
+        margin-left: 15px;
+    }
+
+    div.strike span {
+        font-size: 25p6%x;
+    }
+
+
+    .login{
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+    .login-input{
+      width: 100%;
+    }
+</style>
+<div class="login">
+  <div class="col-lg-6">
+    <a class="btn btn-block btn-social btn-facebook pull-left">Facebook</a>
+  </div>
+  <div class="col-lg-6">
+    <a class="btn btn-block btn-social btn-google pull-right">Google +</a>
+  </div>
+  <div class="strike">
+      <span>or</span>
+  </div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "login-input", placeholder: "email address" %>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <%= f.password_field :password, autocomplete: "off", :class => "login-input", placeholder: "password" %>
+  </div>
+
+    <%= f.submit "Login", :class => "btn-submit"%>
+<% end %>
+</div>
+<%#= render "devise/shared/links" %>
